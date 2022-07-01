@@ -4,9 +4,9 @@ const btn = document.querySelector('.btn');
 
 const backgroundColors = [
   'red',
-  'blue',
+  '#F5DF4D',
   'black',
-  'blue',
+  '#0072B5',
   'green',
   'salmon',
   'darkgrey',
@@ -14,9 +14,10 @@ const backgroundColors = [
   'darkslateblue',
   'maroon',
   'steelblue',
+  '#ff6f61',
 ];
 
-btn.addEventListener('click', function () {
+const randomElement = () => {
   // wrapper.classList.remove('animation');
   const randomColor =
     backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
@@ -26,4 +27,6 @@ btn.addEventListener('click', function () {
   //   wrapper.classList.add('animation');
   // }),
   //   0;
-});
+};
+
+btn.addEventListener('click', randomElement);
