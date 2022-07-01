@@ -18,15 +18,15 @@ const backgroundColors = [
 ];
 
 const randomElement = () => {
-  // wrapper.classList.remove('animation');
+  btn.classList.remove('btn-animation');
   const randomColor =
     backgroundColors[Math.floor(Math.random() * backgroundColors.length)];
   wrapper.style.background = randomColor;
   header.innerText = `background-color: ${randomColor};`;
-  // setTimeout(() => {
-  //   wrapper.classList.add('animation');
-  // }),
-  //   0;
+  setTimeout(() => {
+    btn.classList.add('btn-animation');
+  }),
+    0;
 };
 
 btn.addEventListener('click', randomElement);
